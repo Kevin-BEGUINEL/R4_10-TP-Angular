@@ -1,0 +1,34 @@
+<div class="monForm">
+    <section class="subForm saisieForm">
+        <h2>Nouveau CD</h2>
+        <form [formGroup]="formulaire">
+            <div class="form-group">
+                <label for="title">Titre</label>
+                <input type="text" class="form-control" id="title" formControlName="title" required/>
+            </div>
+            <div class="form-group">
+                <label for="author">Auteur / Groupe</label>
+                <input type="text" class="form-control" id="author" formControlName="author" required/>
+            </div>
+            <div class="form-group">
+                <label for="thumbnail">URL de l'image</label>
+                <input type="url" class="form-control" id="thumbnail" formControlName="thumbnail" required/>
+            </div>
+            <div class="form-group">
+                <label for="dateDeSortie">Date de sortie</label>
+                <input type="date" class="form-control" id="dateDeSortie" formControlName="dateDeSortie" required/>
+            </div>
+            <div class="form-group">
+                <label for="quantite">Quantite</label>
+                <input type="integer" class="form-control" id="quantite" formControlName="quantite" required/>
+            </div>
+            <div class="form-group">
+                <label for="price">Prix (en €)</label>
+                <input type="float" class="form-control" id="price" formControlName="price" required/>
+            </div>
+            <div class="form-group">
+                <button class="button" (click)="valForm()" [disabled]="formulaire.invalid">Valider</button> 
+            </div>
+        </form>
+    </section>
+</div>
